@@ -31,12 +31,12 @@ const Hero = () => {
     const end = new Date(start);
     end.setDate(start.getDate() + (weeksToAdd * 7)); 
 
-    const formatDate = (date) => {
-      const d = String(date.getDate()).padStart(2, '0');
-      const m = String(date.getMonth() + 1).padStart(2, '0');
-      const y = date.getFullYear();
-      return `${m}/${d}/${y}`;
-    };
+   const formatDate = (date: Date) => {
+  const d = String(date.getDate()).padStart(2, '0');
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const y = date.getFullYear();
+  return `${m}/${d}/${y}`;
+};
 
     setStartDate(formatDate(start));
     setEndDate(formatDate(end));
